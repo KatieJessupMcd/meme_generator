@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Meme Generator</title>
+  
+</head>
+<body>
+  <div class="container-fluid">
+    <h1>MEME ME</h1>
+    <form>
+        <div class="form-group">
+          <label for="imageurl">Image URL:</label>
+          <input type="url" class="form-control" id="imageurl" value="" placeholder="Copy and paste image URL" required>
+        </div>
+        <div class="form-group">
+          <label for="firstline">Top Line: </label>
+          <input type="text" class="form-control" id="topline" placeholder="This line will appear on the top of your meme">
+        </div>
+        <div class="form-group">
+          <label for="bottomline">Bottom Line: </label>
+          <input type="text" class="form-control" id="bottomline" placeholder="This line will appear on the bottom of your meme">
+        </div>
+        <input type="button" class="btn btn-danger btn-lg btn-block" id="button" value = "Show Meme"/>
+      </form>
+     
+  </div>
+  <div id="memeDiv">
+  </div>
+
+  <script src="meme.js"></script> 
+</body>
+</html>
