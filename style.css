@@ -3,34 +3,49 @@
   text-align: center;
 }
 
-#left {
-  width: 33%;
-  background: white;
-  display: inline-block;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
+.panel {
+  width: 30%;
+  position: relative;
+  top: 25px;
 }
 
-#middle {
-  width: 33%;
-  background: white;
-  display: inline-block;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
+#left,
+#middle,
 #right {
-  width: 33%;
+  width: 32.1%;
   background: white;
   display: inline-block;
   height: 100%;
+  position: relative;
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 #memeDiv {
-  font-size: 0;
   margin: 0;
   height: 500px;
+}
+
+.top-text-block,
+.bottom-text-block {
+  background-color: transparent;
+  font-size: 40px;
+  font-family: 'Impact';
+  color: white;
+  text-shadow: black 0px 0px 10px;
+  width: 600px;
+  position: absolute;
+  left: 15px;
+  top: 400px;
+  text-align: center;
+}
+
+.top-text-block {
+  top: 1%;
+  width: 100%;
+}
+
+.bottom-text-block {
+  top: 30%;
+  width: 100%;
 }
