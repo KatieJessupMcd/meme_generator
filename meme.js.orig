@@ -75,24 +75,6 @@ function createMeme(index) {
 // add css transition to go opaque with x when mouse hovers over
 //  when it hears event (click), that meme/meme div is deleted
 //  other divs readjust in the imgArr to take its place
-<<<<<<< HEAD
-
-//  loop through panels left right and middle- all things that have the class
-//  panel, and add an event listener to each
-
-for (var i = 0; i < imgArr.length; i++) {
-  imgArr[i].addEventListener('click', deleteMeme);
-}
-
-function deleteMeme(index) {
-  var item = document.getElementById(index);
-  item.parentNode.removeChild(item);
-}
-
-//  document.getElementById('.panel').addEventListener('click', function(){
-//  var item = document.getElementById()
-//  })
-=======
 
 //  loop through panels left right and middle- all things that have the class
 //  panel, and add an event listener to each
@@ -126,4 +108,3 @@ function shiftMeme() {
   //  move over the indexes of the images when one is deleted, will shift one to the left if
   //  not already in the first [0] index
 }
->>>>>>> need_to_merge
