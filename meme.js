@@ -20,6 +20,7 @@ document.getElementById('button').addEventListener('click', function() {
     imgArr.push(imageurl);
     //  and showPics function can execute
     showPics();
+    createMeme(imgArr.length - 1);
   }
 });
 
@@ -51,14 +52,17 @@ function showPics() {
 
 //FUNCTION createMeme
 
-function createMeme() {
+function createMeme(index) {
   //  get size of canvas div we have to work with
   //  grabs value of id topline and saves to variable
-  var topText = document.getElementById('topline');
-  var topDiv = document.getElementById('top-text-block');
-  topText = topDiv;
+  var topText = document.getElementById('topline').value;
+  var topDiv = document.querySelectorAll('.top-text-block');
+  // need to access top div at index
+  topDiv[index].innerText = topText;
   //  grabs value of id bottomline and saves to variable
-  //  var bottomText = document.getElementById('bottomline').value;
+  var bottomText = document.getElementById('bottomline').value;
+  var bottomDiv = document.querySelectorAll('.bottom-text-block');
+  bottomDiv[index].innerText = bottomText;
 
   //  changes font style to impact
   //  size it for panel div
@@ -71,3 +75,36 @@ function createMeme() {
 // add css transition to go opaque with x when mouse hovers over
 //  when it hears event (click), that meme/meme div is deleted
 //  other divs readjust in the imgArr to take its place
+
+//  loop through panels left right and middle- all things that have the class
+//  panel, and add an event listener to each
+
+//  **these lines below 86 were at first loading all three and then getting rid of the left div
+//  all together, leaving only the middle and right divs- need to just empty div backround
+//  and text without getting rid of the whole placehold panel div
+
+//  var leftPanel = document.getElementById('left');
+//  leftPanel.addEventListener('click', deleteMeme);
+
+//  function deleteMeme() {
+//  leftPanel.outerHTML = '';
+//  }
+
+document.getElementById('left').addEventListener('click', deleteMeme);
+
+function deleteMeme() {
+  document.getElementById('left').style.backgroundImage = null;
+  document.getElementByClass('top-text-block').remove();
+}
+
+//  document.getElementById('.panel').addEventListener('click', function(){
+//  var item = document.getElementById()
+//  })
+
+//  TO DO -- need to figure out how to remove text as well
+//  move over images to fill empty space- swap places in the array
+
+function shiftMeme() {
+  //  move over the indexes of the images when one is deleted, will shift one to the left if
+  //  not already in the first [0] index
+}
