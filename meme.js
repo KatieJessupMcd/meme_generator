@@ -76,6 +76,9 @@ function createMeme(index) {
 //  when it hears event (click), that meme/meme div is deleted
 //  other divs readjust in the imgArr to take its place
 
+//  loop through panels left right and middle- all things that have the class
+//  panel, and add an event listener to each
+
 for (var i = 0; i < imgArr.length; i++) {
   imgArr[i].addEventListener('click', deleteMeme);
 }
@@ -88,6 +91,3 @@ function deleteMeme(index) {
 //  document.getElementById('.panel').addEventListener('click', function(){
 //  var item = document.getElementById()
 //  })
-
-//  loop through panels left right and middle- all things that have the class
-//  panel, and add an event listener to each
