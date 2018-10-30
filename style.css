@@ -1,51 +1,53 @@
 .container-fluid {
   background-color: #2ba6cb;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#panel-container {
+  height: -webkit-fill-available;
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 .panel {
-  width: 30%;
   position: relative;
   top: 25px;
-}
-
-#left,
-#middle,
-#right {
-  width: 32.1%;
-  background: white;
+  max-width: 33%;
+  min-height: 100px;
+  padding: 13px;
   display: inline-block;
-  height: 100%;
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
-#memeDiv {
-  margin: 0;
-  height: 500px;
+img {
+  vertical-align: middle;
+  border-style: none;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .top-text-block,
 .bottom-text-block {
   background-color: transparent;
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Impact';
   color: white;
   text-shadow: black 0px 0px 10px;
   width: 600px;
-  position: absolute;
   left: 15px;
-  top: 400px;
   text-align: center;
 }
 
 .top-text-block {
-  top: 1%;
+  position: absolute;
+  top: 10px;
   width: 100%;
 }
 
 .bottom-text-block {
-  top: 30%;
+  position: absolute;
+  bottom: 25px;
   width: 100%;
 }
